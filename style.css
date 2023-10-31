@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.sp-menu {
+
+}
+
+.sp-menu span {
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.sp-overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateX(-100%);
+    transition: transform .3s;
+}
+
+.active-overlay {
+    transform: none;
+}
+
+.sp-overlay ul {
+    margin: 64px auto 0;
+    list-style: none;
+}
+
+
+.sp-overlay a {
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.sp-overlay a:hover {
+    color: burlywood;
+    text-decoration: underline black;
+}
+
+.sp-overlay span {
+    font-size: 48px;
+    position: absolute;
+    top: 16px;
+    right: 32px;
+}

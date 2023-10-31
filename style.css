@@ -22,7 +22,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    transform: translateX(-100%);
+    transform: translateX(200%);
     transition: transform .3s;
 }
 
@@ -53,4 +53,38 @@
     position: absolute;
     top: 16px;
     right: 32px;
+    cursor: pointer;
+}
+
+.pc-menu {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .sp-menu {
+        display: none;
+    }
+
+    .pc-menu {
+        display: block;
+    }
+
+    .pc-menu ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .pc-menu ul li a {
+        text-decoration: none;
+        font-size: 24px;
+        margin-left: 20px;
+        color: black;
+        transition: font-size .3s;
+    }
+
+    .pc-menu ul li a:hover {
+        font-size: 32px;
+        color: burlywood;
+        text-decoration: underline black;
+    }
 }

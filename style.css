@@ -1,13 +1,16 @@
+body {
+    background-color: rgb(46, 46, 46);
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
+    background-color: rgb(46, 46, 46);
+    color: white;
 }
 
-.sp-menu {
-
-}
 
 .sp-menu span {
     font-size: 48px;
@@ -21,7 +24,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.96);
     transform: translateX(200%);
     transition: transform .3s;
 }
@@ -54,6 +57,7 @@
     top: 16px;
     right: 32px;
     cursor: pointer;
+    color: black;
 }
 
 .pc-menu {
@@ -78,13 +82,12 @@
         text-decoration: none;
         font-size: 24px;
         margin-left: 20px;
-        color: black;
+        color: white;
         transition: font-size .3s;
     }
 
     .pc-menu ul li a:hover {
         font-size: 32px;
         color: burlywood;
-        text-decoration: underline black;
     }
 }

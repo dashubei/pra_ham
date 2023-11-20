@@ -42,8 +42,8 @@ body {
 .sp-overlay a {
     text-decoration: none;
     color: black;
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .sp-overlay a:hover {
@@ -51,14 +51,69 @@ body {
     text-decoration: underline black;
 }
 
-.sp-overlay span {
-    font-size: 48px;
+.sp-overlay > ul {
+    margin: 0;
     position: absolute;
-    top: 16px;
-    right: 32px;
-    cursor: pointer;
-    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.sp-overlay li:not(:nth-child(1)) {
+    margin-top: 32px;
+}
+
+
+.pra {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.pra span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: transform .4s, opacity .3s;
+    z-index: 2;
+}
+
+.pra span:nth-child(1) {
+    top: 0;
+}
+
+.pra span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pra span:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.pra span.active:nth-child(1) {
+    top: 50%;
+    background: rgb(46, 46, 46);
+    transform: translateY(-50%) rotate(135deg);
+  }
+  
+  .pra span.active:nth-child(2) {
+    transform: translate(50%, -50%);
+    background: rgb(46, 46, 46);
+    opacity: 0;
+  }
+  
+  .pra span.active:nth-child(3) {
+    top: 50%;
+    background: rgb(46, 46, 46);
+    transform: translateY(-50%) rotate(-135deg);
+  }
 
 .pc-menu {
     display: none;
@@ -91,50 +146,3 @@ body {
         color: burlywood;
     }
 }
-
-.pra {
-    width: 30px;
-    height: 30px;
-    margin: 0 auto;
-    position: relative;
-    cursor: pointer;
-}
-
-.pra span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    transition: transform .4s, opacity .3s;
-}
-
-.pra span:nth-child(1) {
-    top: 0;
-}
-
-.pra span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.pra span:nth-child(3) {
-    top: 100%;
-    transform: translateY(-100%);
-}
-
-.pra span.active:nth-child(1) {
-    top: 50%;
-    transform: translateY(-50%) rotate(135deg);
-  }
-  
-  .pra span.active:nth-child(2) {
-    transform: translate(50%, -50%);
-    opacity: 0;
-  }
-  
-  .pra span.active:nth-child(3) {
-    top: 50%;
-    transform: translateY(-50%) rotate(-135deg);
-  }
